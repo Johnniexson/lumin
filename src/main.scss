@@ -1,0 +1,78 @@
+// Bulma Import
+//@import '~bulma';
+
+//custom
+// Set your brand colors
+$green: #4b5648;
+$green-light: #e2e6e3; 
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+// $family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $green;
+$link: $green-light;
+// $widescreen-enabled: false;
+// $fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $green-light;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all";
+@import "../node_modules/bulma/sass/layout/_all";
+@import "../node_modules/bulma/sass/grid/_all";
+@import "../node_modules/bulma/sass/form/_all";
+@import "../node_modules/bulma/sass/elements/_all";
+@import "../node_modules/bulma/sass/components/_all";
+@import "../node_modules/bulma/sass/base/_all";
+
+.has-badge {
+    position: relative;
+}
+
+.has-badge .badge {
+    position: absolute;
+    top: -5px;
+    right: -12px;
+}
+
+.has-text-centered {
+    text-align: center !important;
+}
+
+.navbar-brand {
+    display: contents;
+}
+
+.is-pointer {
+    cursor: pointer;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: #e2e6e3;
+  }
+
+  .loader {
+      width: 150px;
+      height: 150px;
+  }
+
+@media(max-width: 420px) {
+    .header {
+        flex-flow: wrap;
+    }
+    .products .item img {
+        height: 150px;
+        max-width: 150px;
+    }
+}
