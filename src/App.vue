@@ -7,14 +7,14 @@
             <h2>L U M I N</h2>
           </span>
 
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <a role="button" class="navbar-burger burger" :class="{'is-active': navBar_active}" @click="toggleNavbar()" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div id="navbarBasicExample" class="navbar-menu" :class="{'is-active': navBar_active}">
           <div class="navbar-start">
             <a class="navbar-item">
               Shop
@@ -111,6 +111,7 @@ export default {
         total: 0
       },
       openCartModal: false,
+      navBar_active: false
     }
   },
 
@@ -205,6 +206,10 @@ export default {
 
     formatCurrency(value) {
       return new Intl.NumberFormat('en', { style: 'currency', currency: this.currency }).format(value)
+    },
+
+    toggleNavbar() {
+      this.navBar_active = !this.navBar_active;
     }
   }
 }

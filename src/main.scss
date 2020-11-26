@@ -67,6 +67,14 @@ $input-shadow: none;
       height: 150px;
   }
 
+@media screen and (max-width: 1023px) {
+.navbar-menu.is-active {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+}
+}
+
 @media(max-width: 420px) {
     .header {
         flex-flow: wrap;

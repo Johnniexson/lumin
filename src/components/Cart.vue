@@ -99,6 +99,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@media(max-width: 450px) {
+  .main {
+    width: 100vw !important;
+  }
+}
+
 .backdrop {
   height: 100vh;
   width: 100vw;
